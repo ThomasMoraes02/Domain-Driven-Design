@@ -15,7 +15,7 @@ class StudentRegisterTest extends TestCase
     {
         $studentRegister = new StudentRegisterDto("321.456.789-35", "Joice", "joice@gmail.com");
 
-        $repository = new StudentRepositorySqlite();
+        $repository = new StudentRepositoryMemory();
 
         $useCase = new StudentRegister($repository);
         $useCase->execute($studentRegister);
