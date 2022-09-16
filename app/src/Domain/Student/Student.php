@@ -4,6 +4,7 @@ namespace Alura\CleanArchitecture\src\Domain\Student;
 use Alura\CleanArchitecture\src\Domain\Cpf;
 use Alura\CleanArchitecture\src\Domain\Email;
 use Alura\CleanArchitecture\src\Domain\Student\Phone;
+use DomainException;
 
 class Student
 {
@@ -28,6 +29,10 @@ class Student
 
     public function addPhone(string $ddd, string $number): self
     {
+        if(count($this->phones()) === 2) {
+            throw new StudentHasTwoPhones();
+        }
+
         $this->phones[] = new Phone($ddd, $number);
         return $this;
     }

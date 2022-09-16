@@ -44,3 +44,33 @@ Uma classe que executa alguma ação que não pertence a nenhuma entidade ou VO
 Separar em uma classe especifica o fluxo da aplicação. Independente de qual tipo de aplicação: web, cli, api
 
 Os termos Use Case, Application Service e Command Handler são basicamente sinônimos e servem para fornecer pontos de entrada na sua aplicação, de forma independente dos mecanismos de entrega (Web, CLI, etc).
+
+
+## DDD - Domain Driven Design
+
+Entidades -> Classes que possuem uma identidade
+
+Value Objects -> Igualdade de Indentidade
+
+Repositórios -> Persistência de dados
+
+Infraestrutura -> Tipo do repositório, conexão
+
+Services -> Classes que só realizam serviço - regras que não fazem parte de entidades
+
+Use Cases -> Fluxo da aplicação
+
+DTO - Data Transfer Object - Objeto de transferência de dados
+
+
+
+## Linguagem Ubíqua
+
+Termos, nomes que refletem a equipe de negócios
+
+## Aggregates
+
+Entidade que possui objetos relacionados
+
+Telefone só pode ser criado dentro da classe Aluno e Aluno quem mantém isso
+
