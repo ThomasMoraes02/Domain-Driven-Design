@@ -1,0 +1,5 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule ^read/([0-9a-zA-Z_-]*)$ read.php? [NC,L]
+RewriteRule ^read2/([0-9a-zA-Z_-]*)$ read.php?name=$1 [NC,L]
+RewriteRule ^update/([0-9a-zA-Z_-]*)$ update.php?id=$1 [NC,L]
+RewriteRule ^delete/([0-9a-zA-Z_-]*)$ delete.php?id=$1 [NC,L]
